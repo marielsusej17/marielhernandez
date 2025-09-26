@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Reservas</title>
+<link rel="stylesheet" href="css/reservas.css">
+</head>
+<body>
+
+<div class="contenedor">
+  <!-- Formulario de Reserva de Mesa -->
+  <form class="formulario">
+    <h2>Reservar una mesa</h2>
+
+    <label for="nombreMesa">Nombre completo</label>
+    <input type="text" id="nombreMesa" required>
+<br><br>
+    <div class="campo-doble">
+      <div>
+        <label for="emailMesa">Correo</label>
+        <input type="email" id="emailMesa" required>
+      </div>
+      <div>
+        <label for="telefonoMesa">Teléfono</label>
+        <input type="tel" id="telefonoMesa" required>
+      </div>
+    </div>
+
+    <div class="campo-doble">
+      <div>
+        <label for="fechaMesa">Fecha</label>
+        <input type="date" id="fechaMesa" required>
+      </div>
+      <div>
+        <label for="horaMesa">Hora</label>
+        <input type="time" id="horaMesa" required>
+      </div>
+    </div>
+
+    <label for="personasMesa">Número de personas</label>
+    <select id="personasMesa" required>
+      <option value="">Seleccione...</option>
+      <option>1 persona</option>
+      <option>2 personas</option>
+      <option>3 personas</option>
+      <option>4 personas</option>
+      <option>5 personas</option>
+      <option>6 personas</option>
+    </select>
+<br><br>
+    <label for="mensajeMesa">Mensaje especial</label>
+    <textarea id="mensajeMesa" placeholder="Ej: mesa junto a la ventana"></textarea>
+
+    <button type="submit">Reservar Mesa</button>
+  </form>
+
+  <!-- Formulario de Reserva de Habitación -->
+  <form class="formulario">
+    <h2>Reserva en el hotel</h2>
+
+    <label for="nombreHab">Nombre completo</label>
+    <input type="text" id="nombreHab" required>
+<br><br>
+    <div class="campo-doble">
+      <div>
+        <label for="emailHab">Correo</label>
+        <input type="email" id="emailHab" required>
+      </div>
+      <div>
+        <label for="telefonoHab">Teléfono</label>
+        <input type="tel" id="telefonoHab" required>
+      </div>
+    </div>
+
+    <div class="campo-doble">
+      <div>
+        <label for="fechaEntrada">Entrada</label>
+        <input type="date" id="fechaEntrada" required>
+      </div>
+      <div>
+        <label for="fechaSalida">Salida</label>
+        <input type="date" id="fechaSalida" required>
+      </div>
+    </div>
+
+    <div class="campo-doble">
+      <div>
+        <label for="personasHab">Huéspedes</label>
+        <select id="personasHab" required>
+          <option value="">Seleccione...</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+        </select>
+      </div>
+      <div>
+        <label for="tipoHab">Tipo</label>
+        <select id="tipoHab" required>
+          <option value="">Seleccione...</option>
+          <option>Estándar</option>
+          <option>Suite</option>
+          <option>Cabaña</option>
+        </select>
+      </div>
+    </div>
+
+    <label for="mensajeHab">Petición especial</label>
+    <textarea id="mensajeHab" placeholder="Ej: cama extra, vista al bosque..."></textarea>
+
+    <button type="submit">Reservar en el hotel</button>
+  </form>
+</div>
+
+</body>
+</html>

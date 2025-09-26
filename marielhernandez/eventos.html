@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos y Reservas</title>
+<link rel="stylesheet" href="css/eventos.css">
+</head>
+<body>
+
+
+  <!-- Calendario + Formulario -->
+  <section class="contenedor">
+
+    <!-- Calendario -->
+    <div class="calendario">
+      <!-- Radios para meses -->
+      <input type="radio" name="mes" id="ene" checked>
+      <input type="radio" name="mes" id="feb">
+      <input type="radio" name="mes" id="mar">
+
+      <!-- Flechas -->
+      <label class="flecha izq" for="mar">&#8592;</label>
+      <label class="flecha der" for="feb">&#8594;</label>
+
+      <!-- Meses -->
+      <div class="contenedor-cal">
+        <!-- Enero -->
+        <div class="mes enero">
+          <h3>Enero 2025</h3>
+          <table>
+            <tr><th>Dom</th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th></tr>
+            <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+            <tr><td>5</td><td class="holiday">6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+            <tr><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td></tr>
+            <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+            <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
+          </table>
+        </div>
+
+        <!-- Febrero -->
+        <div class="mes febrero">
+          <h3>Febrero 2025</h3>
+          <table>
+            <tr><th>Dom</th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th></tr>
+            <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+            <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+            <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+            <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+            <tr><td>23</td><td>24</td><td>25</td><td class="holiday">26</td><td>27</td><td>28</td><td></td></tr>
+          </table>
+        </div>
+
+        <!-- Marzo -->
+        <div class="mes marzo">
+          <h3>Marzo 2025</h3>
+          <table>
+            <tr><th>Dom</th><th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th></tr>
+            <tr><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr>
+            <tr><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td></tr>
+            <tr><td>15</td><td>16</td><td class="holiday">17</td><td>18</td><td>19</td><td>20</td><td>21</td></tr>
+            <tr><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td></tr>
+            <tr><td>29</td><td>30</td><td>31</td><td></td><td></td><td></td><td></td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Formulario -->
+    <div class="formulario">
+      <h2>Reserva tu Evento</h2>
+      <form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" required>
+
+        <label for="tipo">Tipo de evento</label>
+        <select id="tipo" required>
+          <option value="">Seleccione...</option>
+          <option value="cumpleaños">Cumpleaños</option>
+          <option value="aniversario">Aniversario</option>
+          <option value="otro">Otro</option>
+        </select>
+
+        <label for="fecha">Fecha</label>
+        <input type="date" id="fecha" required>
+
+        <label for="detalles">Detalles</label>
+        <textarea id="detalles"></textarea>
+
+        <button type="submit">Reservar</button>
+      </form>
+    </div>
+
+  </section>
+
+</body>
+</html>

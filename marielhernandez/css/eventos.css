@@ -1,0 +1,132 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      background-color: black;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #c0392b;
+      margin-bottom: 15px;
+    }
+
+    p {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 15px;
+    }
+
+    /* Contenedor calendario + formulario */
+    .contenedor {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    /* --- Calendario CSS --- */
+    .calendario {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      width: 320px;
+      position: relative;
+    }
+
+    .flecha {
+      position: absolute;
+      top: 15px;
+      font-size: 22px;
+      color: #c0392b;
+      cursor: pointer;
+      user-select: none;
+    }
+    .izq { left: 10px; }
+    .der { right: 10px; }
+
+    input[type="radio"] { display: none; }
+
+    .mes { display: none; }
+    input#ene:checked ~ .contenedor-cal .enero,
+    input#feb:checked ~ .contenedor-cal .febrero,
+    input#mar:checked ~ .contenedor-cal .marzo {
+      display: block;
+    }
+
+    .mes h3 {
+      text-align: center;
+      margin: 10px 0;
+      color: #c0392b;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      width: 14.28%;
+      text-align: center;
+      padding: 5px;
+    }
+    th {
+      background: #c0392b;
+      color: #fff;
+    }
+    td.holiday {
+      background: rgba(192,57,43,0.2);
+      color: #c0392b;
+      font-weight: bold;
+    }
+
+    /* --- Formulario --- */
+    .formulario {
+      flex: 1;
+      min-width: 280px;
+      background: #fff;
+      padding: 70px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .formulario label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .formulario input,
+    .formulario select,
+    .formulario textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    .formulario textarea { resize: none; height: 80px; }
+    .formulario button {
+      width: 100%;
+      padding: 14px;
+      background: #931102;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .formulario button:hover { background: #e74c3c; }
